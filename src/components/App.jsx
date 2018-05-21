@@ -26,14 +26,14 @@ class App extends Component {
   renderReminders() {
     const { reminders } = this.props;
     return (
-      <ul className="list-group col-sm-4">
+      <ul className="list-group col-sm-4 lisst">
         {
           reminders.map(reminder => {
             return (
               <li key={reminder.id} className="list-group-item">
                <div className="list-item">
-                  <div>{reminder.text}</div>
-                  <div><em>{moment(new Date(reminder.dueDate)).fromNow()}</em></div>
+                  <div className="reminders">{reminder.text}</div>
+                  <div className="reminder-time"><em>{moment(new Date(reminder.dueDate)).fromNow()}</em></div>
               </div>
                 <div
                   className="list-item delete-button"
@@ -79,7 +79,7 @@ class App extends Component {
         </div>
         {this.renderReminders()}
         <div
-          className="btn btn-danger"
+          className="btn btn-danger redbutton"
           onClick={() => this.props.clearReminders()}
           >
           Clear All
