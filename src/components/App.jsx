@@ -30,7 +30,7 @@ class App extends Component {
         {
           reminders.map(reminder => {
             return (
-              <li key={reminder.id} className="list-group-item">
+              <li key={reminder.id} className="list-group-item single-reminder">
                <div className="list-item">
                   <div className="reminders">{reminder.text}</div>
                   <div className="reminder-time"><em>{moment(new Date(reminder.dueDate)).fromNow()}</em></div>
@@ -59,19 +59,19 @@ class App extends Component {
         <div className="form-inline reminder-form">
           <div className="form-group">
             <input
-              className="form-control"
+              className="form-control task-input"
               placeholder="I have to..."
               onChange={event => this.setState({text: event.target.value})}
              />
              <input
-               className="form-control"
+               className="form-control date-input"
                type="datetime-local"
                onChange={event => this.setState({dueDate: event.target.value})}
              />
           </div>
           <button
             type="button"
-            className="btn btn-success"
+            className="btn btn-success green-button"
             onClick={() => this.addReminder()}
             >
             Add Reminder

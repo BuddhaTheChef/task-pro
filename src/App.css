@@ -34,14 +34,32 @@ input {
   margin: 5px;
 }
 
+.task-input{
+  box-shadow: 0 4px 20px 4px rgba(0,0,0,.4);
+}
+
+.date-input{
+  box-shadow: 0 4px 20px 4px rgba(0,0,0,.4);
+}
+
+.green-button {
+  box-shadow: 0 4px 20px 4px rgba(0,0,0,.4);
+  margin-left: 5px;
+}
+
 .reminder-form {
   padding: 5px;
+}
+
+.single-reminder{
+  box-shadow: 0 4px 20px 4px rgba(0,0,0,.4);
+
 }
 
 .lisst {
   padding-top: 40px;
   padding-left: 15px;
-margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .reminders{
@@ -67,4 +85,5 @@ margin-bottom: 40px;
   padding-top: 10px;
   font-size: 17px;
   height: 46px;
+  box-shadow: 0 4px 20px 4px rgba(0,0,0,.4);
 }
